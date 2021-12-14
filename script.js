@@ -14,3 +14,8 @@ function createSquares() {
 }
 
 createSquares();
+
+container.addEventListener("mouseover", function(event) {
+    event.target.style.backgroundColor = "black";
+    
+});

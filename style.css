@@ -13,6 +13,10 @@ h1 {
     margin-top: 10%;
 }
 
+.active {
+    background-color: black;
+}
+
 #container {
     display: flex;
     flex-direction: column;
