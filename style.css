@@ -1,18 +1,27 @@
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
     margin: 0;
     height: 100%;
+    background-color: #b8b894;
+    font-family: 'Josefine Sans', sans-serif;
+}
+
+h1 {
+    margin-top: 10%;
 }
 
 #container {
     display: flex;
     flex-direction: column;
-    min-height: 75%;
-    min-width: 50%;
+    min-height: 500px;
+    width: 350px;
     margin: 10%;
 }
 
 .row {
-    border-style: 1px solid blue;
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -20,6 +29,6 @@ body, html {
 
 .item {
     background-color: white;
-    border: 1px dotted black;
+    border: 0.2px solid gray;
     flex: 1;
 }
