@@ -17,11 +17,23 @@ h1 {
     background-color: black;
 }
 
+#menu-bar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10%;
+}
+
+button {
+    margin: 20px;
+    padding: 7px;
+    min-width: 50px;
+}
 #container {
     display: flex;
     flex-direction: column;
     min-height: 500px;
-    width: 350px;
+    width: 500px;
     margin: 10%;
 }
 

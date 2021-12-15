@@ -27,7 +27,7 @@ eraserBtn.addEventListener('click', eraseItem);
 
 const gridItems = document.querySelectorAll('.item');
 
-//Event listener that will allow user to interact with grid.
+//Function that allows you to color the Grid.
 function colorItem() {
 
     container.addEventListener("mouseover", function(event) {
@@ -43,6 +43,7 @@ function eraseGrid() {
     });
 }
 
+//Function that erases the color of a particular grid item.
 function eraseItem() {
     container.addEventListener('mouseover', function(event) {
         event.target.style.backgroundColor = 'white';
