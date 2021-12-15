@@ -1,4 +1,5 @@
 const container = document.querySelector('#container');
+const resetBtn = document.querySelector('#reset');
 
 function createSquares() {
     for (let j = 0; j < 16; j++) {
@@ -14,8 +15,17 @@ function createSquares() {
 }
 
 createSquares();
-
 container.addEventListener("mouseover", function(event) {
     event.target.style.backgroundColor = "black";
     
 });
+
+const gridItems = document.querySelectorAll('.item');
+resetBtn.addEventListener('click', eraseGrid);
+
+
+function eraseGrid() {
+    gridItems.forEach(element => {
+        element.style.backgroundColor = 'white';
+    });
+}
