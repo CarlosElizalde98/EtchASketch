@@ -29,6 +29,11 @@ button {
     padding: 7px;
     min-width: 50px;
 }
+
+button:hover {
+    background-color:#b8b894;
+}
+
 #container {
     display: flex;
     flex-direction: column;
