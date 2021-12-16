@@ -12,7 +12,6 @@ createSquares();
 
 //Function that will create the grid.
 function createSquares(number) {
-    console.log(number);
     if (isNaN(number)) {
         number = defaultValue;
     }
@@ -49,12 +48,14 @@ function colorItem() {
     }); 
 }
 
+//Function that allows you to add rainbow colors to grid.
 function rainbowItem () {
     container.addEventListener("mouseover", function(event) {
         event.target.style.backgroundColor = rainbowColor();
     }
  )}
 
+ //Function creates rainbow colors randomly and returns values.
 function rainbowColor() {
     let x, y, z, randomColor;
     x = Math.round(Math.random() * 256);
@@ -67,7 +68,6 @@ function rainbowColor() {
 //Function resets the grid back to default color.
 function eraseGrid() {
     let gridItems = document.querySelectorAll('.item');
-    console.log(gridItems);
     gridItems.forEach(element => {
         element.style.backgroundColor = 'white';
     });
