@@ -2,6 +2,7 @@ const container = document.querySelector('#container');
 const resetBtn = document.querySelector('#reset');
 const eraserBtn = document.querySelector('#eraser');
 const colorBtn = document.querySelector('#color');
+const rainbowBtn = document.querySelector('#rainbow');
 const changeSizeBtn = document.querySelector('#changeSize');
 
 const defaultValue = 16;
@@ -29,6 +30,8 @@ function createSquares(number) {
 
 colorBtn.addEventListener('click', colorItem);
 
+rainbowBtn.addEventListener('click', rainbowItem);
+
 resetBtn.addEventListener('click', eraseGrid);
 
 eraserBtn.addEventListener('click', eraseItem);
@@ -44,6 +47,21 @@ function colorItem() {
         event.target.style.backgroundColor = "black";
         
     }); 
+}
+
+function rainbowItem () {
+    container.addEventListener("mouseover", function(event) {
+        event.target.style.backgroundColor = rainbowColor();
+    }
+ )}
+
+function rainbowColor() {
+    let x, y, z, randomColor;
+    x = Math.round(Math.random() * 256);
+    y = Math.round(Math.random() * 256);
+    z = Math.round(Math.random() * 256);
+    randomColor = 'Rgb(' + x + ',' + y + ',' + z+')';
+    return randomColor;
 }
 
 //Function resets the grid back to default color.
